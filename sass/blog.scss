@@ -1,0 +1,99 @@
+@import "./variable";
+@import "./header.scss";
+@import "./banner.scss";
+@import "./footer.scss";
+@import "./back-to-top.scss";
+
+*{
+    box-sizing: border-box;
+    font-family: "Jost",sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.posts{
+    background-color: $bg-light;
+    .posts-main{
+        .container{
+            @include container();
+        }     
+        .sub-title{
+            @include sub-title();
+        }
+        .hny-title{
+            @include hny-title();
+        }
+        .row{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+            .card{
+                border: none;
+                border-radius: 8px;
+                &:hover .card-body{
+                    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
+                }
+                &:hover{
+                    transform: translateY(-0.5rem);
+                    transition: .3s ease;
+                }
+                img{
+                    max-width: 100%;
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                }
+                p{
+                    @include text_p(1.2em,28px,0,0);
+                }
+                a.blog-desc{
+                    display: block;
+                    text-decoration: none;
+                    font-size: 26px;
+                    line-height: 34px;
+                    font-weight: 600;
+                    color: $heading-color;
+                    margin-bottom: 6px;
+                    text-transform: capitalize;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+                .author a{
+                    text-decoration: none;
+                    color: $heading-color;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 28px;
+                    &:hover{
+                        color: $secondary-color;
+                    }
+                }
+                .blog-details{
+                    background: $bg-color;
+                    padding: 30px 20px;
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                    // box-shadow: 0 25px 98px 0 rgb(19 19 19 / 3%);
+                }
+                .author span{
+                    color: $font-color;
+                }
+                .blog-meta{
+                    list-style: none;
+                    margin:0;
+                    padding: 0;
+                    .meta-item{
+                        display: inline-block;
+                        margin-right: 15px;
+                        font-size: 15px;
+                        color: #888;
+                    }
+                }
+            }
+            
+        }
+
+    }
+}

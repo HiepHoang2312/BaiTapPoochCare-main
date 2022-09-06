@@ -1,0 +1,59 @@
+@import "./variable";
+@import "./header.scss";
+@import "./banner.scss";
+@import "./footer.scss";
+@import "./back-to-top.scss";
+
+*{
+    box-sizing: border-box;
+    font-family: "Jost",sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.photo{
+    .container{
+        @include container();
+        padding:3rem 3.5rem;
+        .photo-grids{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            border-bottom: 1px solid $border-light;
+            padding-bottom: 80px;
+            margin-top: 80px;
+            .sub-title{
+                @include sub-title();
+            }
+            .hny-title{
+                @include hny-title();
+            }
+            .read{
+                @include read();
+            }
+            p{
+                @include text_p(1.2em,28px,0,0);
+            }
+            .pl-lg-5{
+                padding-left: 3rem;
+            }  
+            .pr-lg-5{
+                padding-right: 3rem;
+            }
+            .img-fluid{
+                max-width: 100%;
+                height: auto;
+                border-radius: 15px;
+            }
+        }
+        .mt-0{
+            margin-top: 0;             
+        }
+        .photo-grids:nth-child(4){
+            border: none;
+             
+        }
+
+        
+    }
+}
